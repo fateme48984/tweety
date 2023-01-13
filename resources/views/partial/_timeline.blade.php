@@ -2,10 +2,10 @@
     <div class="flex p-4 {{$loop->last ? '' : 'border-b border-b-gray-300 '}}">
         <div class="mr-4 flex-shrink-0">
             <a href="{{ route('profile.show',$tweet->user) }}">
-                <img src="{{$tweet->user->avatar}}"
+                <img src="{{$user->avatar}}"
                      alt=""
                      class="rounded-full mr-2"
-                     style="width:40px; height:40px"
+                     style="width:50px; height:50px"
                 />
             </a>
         </div>
@@ -22,10 +22,10 @@
                 <x-like-buttons :tweet="$tweet" />
             @endauth
         </div>
-</div>
+    </div>
 @empty
     <div class="flex p-4">
-     No tweets yet!
+        No tweets yet!
     </div>
 @endforelse
 

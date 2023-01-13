@@ -15,23 +15,24 @@
 
     <!-- Scripts -->
     @vite('resources/js/app.js')
+{{--    <script type="module">--}}
+{{--        $(document).ready(function(){--}}
+{{--            alert('hiiiiiiii');--}}
+{{--        });--}}
+{{--    </script>--}}
 </head>
 <body>
-    <div id="app">
-        <section class="px-8 py-4 mb-6">
-            <header class="container mx-auto">
-                <h1>
-                    <img src="images/logo.svg"
-                         alt="Tweety"
-                         />
-                </h1>
-            </header>
-        </section>
-        <section class="px-8">
-            <main class="container mx-auto">
-                @yield('content')
-            </main>
-        </section>
-    </div>
+<div id="app">
+    <section class="px-12 py-4 mb-6">
+        <header class="container mx-auto">
+            <h1>
+                <img src="/images/logo.svg"
+                     alt="Tweety"
+                />
+            </h1>
+        </header>
+    </section>
+    {{$slot}}
+</div>
 </body>
 </html>
