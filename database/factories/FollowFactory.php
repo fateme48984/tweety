@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Weather>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Follow>
  */
-class WeatherFactory extends Factory
+class FollowFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +18,8 @@ class WeatherFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id' => User::factory()->create()->id,
+            'following_user_id' =>  User::factory()->create()->id
         ];
     }
 }

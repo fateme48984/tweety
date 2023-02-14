@@ -15,11 +15,7 @@
 
     <!-- Scripts -->
     @vite('resources/js/app.js')
-{{--    <script type="module">--}}
-{{--        $(document).ready(function(){--}}
-{{--            alert('hiiiiiiii');--}}
-{{--        });--}}
-{{--    </script>--}}
+
 </head>
 <body>
 <div id="app">

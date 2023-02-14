@@ -21,7 +21,7 @@ class LikeFactory extends Factory
         return [
             'user_id' => User::factory()->create()->id,
             'tweet_id' => Tweet::factory()->create()->id,
-            'likes' => $this->faker->boolean
+            'liked' => $this->faker->boolean
         ];
     }
 }
